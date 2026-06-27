@@ -4,15 +4,10 @@ import json
 
 import torch
 import torch.nn as nn
-import torch.nn.functional as F
 from torch.utils.data import Dataset, DataLoader
 
 from nltk_utils import bag_of_words, tokenize, stem
 from model import NeuralNet
-
-random.seed(42)
-np.random.seed(42)
-torch.manual_seed(42)
 
 with open('intents.json', 'r') as f:
     intents = json.load(f)
@@ -34,7 +29,8 @@ for intent in intents['intents']:
         xy.append((w, tag))
 
 # stem and lower each word
-all_words = [stem(w) for w in all_words]
+ignore_words = ['?', '.', '!']
+all_words = [stem(w) for w in all_words if w not in ignore_words]
 # remove duplicates and sort
 all_words = sorted(set(all_words))
 tags = sorted(set(tags))
@@ -58,11 +54,11 @@ X_train = np.array(X_train)
 y_train = np.array(y_train)
 
 # Hyper-parameters 
-num_epochs = 1200
-batch_size = 64
-learning_rate = 0.01
+num_epochs = 1000
+batch_size = 8
+learning_rate = 0.001
 input_size = len(X_train[0])
-hidden_size = 256
+hidden_size = 8
 output_size = len(tags)
 print(input_size, output_size)
 
@@ -85,8 +81,7 @@ dataset = ChatDataset()
 train_loader = DataLoader(dataset=dataset,
                           batch_size=batch_size,
                           shuffle=True,
-                          num_workers=0,
-                          generator=torch.Generator().manual_seed(42))
+                          num_workers=0)
 
 device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 
@@ -97,41 +92,27 @@ criterion = nn.CrossEntropyLoss()
 optimizer = torch.optim.Adam(model.parameters(), lr=learning_rate)
 
 # Train the model
-last_average_loss = None
 for epoch in range(num_epochs):
-    running_loss = 0.0
     for (words, labels) in train_loader:
-        words = words.to(device=device, dtype=torch.float32)
-        labels = labels.to(device=device, dtype=torch.long)
-
+        words = words.to(device)
+        labels = labels.to(dtype=torch.long).to(device)
+        
         # Forward pass
         outputs = model(words)
+        # if y would be one-hot, we must apply
+        # labels = torch.max(labels, 1)[1]
         loss = criterion(outputs, labels)
-
+        
         # Backward and optimize
         optimizer.zero_grad()
         loss.backward()
         optimizer.step()
-
-        running_loss += loss.item() * labels.size(0)
-
-    last_average_loss = running_loss / len(dataset)
-
-    if (epoch + 1) % 100 == 0:
-        print(f'Epoch [{epoch + 1}/{num_epochs}], Average loss: {last_average_loss:.4f}')
+        
+    if (epoch+1) % 100 == 0:
+        print (f'Epoch [{epoch+1}/{num_epochs}], Loss: {loss.item():.4f}')
 
 
-model.eval()
-with torch.no_grad():
-    train_words = torch.from_numpy(X_train).to(device=device, dtype=torch.float32)
-    train_labels = torch.from_numpy(y_train).to(device=device, dtype=torch.long)
-    train_outputs = model(train_words)
-    final_loss = criterion(train_outputs, train_labels).item()
-    predictions = torch.argmax(F.softmax(train_outputs, dim=1), dim=1)
-    train_accuracy = (predictions == train_labels).float().mean().item()
-
-print(f'final loss: {final_loss:.4f}')
-print(f'training accuracy: {train_accuracy:.2%}')
+print(f'final loss: {loss.item():.4f}')
 
 data = {
 "model_state": model.state_dict(),
