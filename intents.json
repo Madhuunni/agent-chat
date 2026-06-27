@@ -228,6 +228,1016 @@
           ]
         }
       ]
+    },
+    {
+      "tag": "selenium_dynamic_navigation_example_login",
+      "patterns": [
+        "Navigate to https://example.com/login."
+      ],
+      "responses": [
+        {
+          "test_name": "Dynamic Navigation Test",
+          "base_url": "https://example.com/login",
+          "steps": [
+            {
+              "step_no": 1,
+              "action": "navigate",
+              "element": null,
+              "by": null,
+              "selector": null,
+              "value": "https://example.com/login",
+              "value_from_env": null,
+              "description": "Navigate to the application URL"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "tag": "selenium_dynamic_navigation_staging_shop",
+      "patterns": [
+        "Open https://staging.shop.test/auth/sign-in."
+      ],
+      "responses": [
+        {
+          "test_name": "Dynamic Navigation Test",
+          "base_url": "https://staging.shop.test/auth/sign-in",
+          "steps": [
+            {
+              "step_no": 1,
+              "action": "navigate",
+              "element": null,
+              "by": null,
+              "selector": null,
+              "value": "https://staging.shop.test/auth/sign-in",
+              "value_from_env": null,
+              "description": "Navigate to the application URL"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "tag": "selenium_dynamic_navigation_local_admin",
+      "patterns": [
+        "Go to http://127.0.0.1:8080/admin."
+      ],
+      "responses": [
+        {
+          "test_name": "Dynamic Navigation Test",
+          "base_url": "http://127.0.0.1:8080/admin",
+          "steps": [
+            {
+              "step_no": 1,
+              "action": "navigate",
+              "element": null,
+              "by": null,
+              "selector": null,
+              "value": "http://127.0.0.1:8080/admin",
+              "value_from_env": null,
+              "description": "Navigate to the application URL"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "tag": "selenium_dynamic_navigation_query_url",
+      "patterns": [
+        "Launch the application at https://qa.portal.company.com/users?active=true."
+      ],
+      "responses": [
+        {
+          "test_name": "Dynamic Navigation Test",
+          "base_url": "https://qa.portal.company.com/users?active=true",
+          "steps": [
+            {
+              "step_no": 1,
+              "action": "navigate",
+              "element": null,
+              "by": null,
+              "selector": null,
+              "value": "https://qa.portal.company.com/users?active=true",
+              "value_from_env": null,
+              "description": "Navigate to the application URL"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "tag": "selenium_dynamic_navigation_dashboard",
+      "patterns": [
+        "Visit http://localhost:3000/dashboard."
+      ],
+      "responses": [
+        {
+          "test_name": "Dynamic Navigation Test",
+          "base_url": "http://localhost:3000/dashboard",
+          "steps": [
+            {
+              "step_no": 1,
+              "action": "navigate",
+              "element": null,
+              "by": null,
+              "selector": null,
+              "value": "http://localhost:3000/dashboard",
+              "value_from_env": null,
+              "description": "Navigate to the application URL"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "tag": "selenium_dynamic_input_email",
+      "patterns": [
+        "Navigate to https://example.com/login. Enter 'alice@example.com' in the field having id='email'."
+      ],
+      "responses": [
+        {
+          "test_name": "Dynamic Input Test",
+          "base_url": "https://example.com/login",
+          "steps": [
+            {
+              "step_no": 1,
+              "action": "navigate",
+              "element": null,
+              "by": null,
+              "selector": null,
+              "value": "https://example.com/login",
+              "value_from_env": null,
+              "description": "Navigate to the application URL"
+            },
+            {
+              "step_no": 2,
+              "action": "type",
+              "element": "email",
+              "by": "css selector",
+              "selector": "input[id='email']",
+              "value": "alice@example.com",
+              "value_from_env": null,
+              "description": "Enter email value"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "tag": "selenium_dynamic_input_full_name",
+      "patterns": [
+        "Open http://localhost:3000/signup. Type 'John Smith' into input id='fullName'."
+      ],
+      "responses": [
+        {
+          "test_name": "Dynamic Input Test",
+          "base_url": "http://localhost:3000/signup",
+          "steps": [
+            {
+              "step_no": 1,
+              "action": "navigate",
+              "element": null,
+              "by": null,
+              "selector": null,
+              "value": "http://localhost:3000/signup",
+              "value_from_env": null,
+              "description": "Navigate to the application URL"
+            },
+            {
+              "step_no": 2,
+              "action": "type",
+              "element": "full name",
+              "by": "css selector",
+              "selector": "input[id='fullName']",
+              "value": "John Smith",
+              "value_from_env": null,
+              "description": "Enter full name value"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "tag": "selenium_dynamic_input_phone",
+      "patterns": [
+        "Go to https://qa.portal.test/profile. Fill '5551234567' in field id='phoneNumber'."
+      ],
+      "responses": [
+        {
+          "test_name": "Dynamic Input Test",
+          "base_url": "https://qa.portal.test/profile",
+          "steps": [
+            {
+              "step_no": 1,
+              "action": "navigate",
+              "element": null,
+              "by": null,
+              "selector": null,
+              "value": "https://qa.portal.test/profile",
+              "value_from_env": null,
+              "description": "Navigate to the application URL"
+            },
+            {
+              "step_no": 2,
+              "action": "type",
+              "element": "phone number",
+              "by": "css selector",
+              "selector": "input[id='phoneNumber']",
+              "value": "5551234567",
+              "value_from_env": null,
+              "description": "Enter phone number value"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "tag": "selenium_dynamic_input_city",
+      "patterns": [
+        "Launch https://app.test/settings and enter 'New York' using id='city'."
+      ],
+      "responses": [
+        {
+          "test_name": "Dynamic Input Test",
+          "base_url": "https://app.test/settings",
+          "steps": [
+            {
+              "step_no": 1,
+              "action": "navigate",
+              "element": null,
+              "by": null,
+              "selector": null,
+              "value": "https://app.test/settings",
+              "value_from_env": null,
+              "description": "Navigate to the application URL"
+            },
+            {
+              "step_no": 2,
+              "action": "type",
+              "element": "city",
+              "by": "css selector",
+              "selector": "input[id='city']",
+              "value": "New York",
+              "value_from_env": null,
+              "description": "Enter city value"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "tag": "selenium_dynamic_input_customer_code",
+      "patterns": [
+        "Visit https://demo.test/form. Set id='customerCode' to 'CUST-1024'."
+      ],
+      "responses": [
+        {
+          "test_name": "Dynamic Input Test",
+          "base_url": "https://demo.test/form",
+          "steps": [
+            {
+              "step_no": 1,
+              "action": "navigate",
+              "element": null,
+              "by": null,
+              "selector": null,
+              "value": "https://demo.test/form",
+              "value_from_env": null,
+              "description": "Navigate to the application URL"
+            },
+            {
+              "step_no": 2,
+              "action": "type",
+              "element": "customer code",
+              "by": "css selector",
+              "selector": "input[id='customerCode']",
+              "value": "CUST-1024",
+              "value_from_env": null,
+              "description": "Enter customer code value"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "tag": "selenium_dynamic_login_user_email_password",
+      "patterns": [
+        "Navigate to https://example.com/login. Enter email id='userEmail' value 'bob@example.com' and password id='userPassword' value 'Secret@123'. Click login."
+      ],
+      "responses": [
+        {
+          "test_name": "Dynamic Multi Field Test",
+          "base_url": "https://example.com/login",
+          "steps": [
+            {
+              "step_no": 1,
+              "action": "navigate",
+              "element": null,
+              "by": null,
+              "selector": null,
+              "value": "https://example.com/login",
+              "value_from_env": null,
+              "description": "Navigate to the application URL"
+            },
+            {
+              "step_no": 2,
+              "action": "type",
+              "element": "email",
+              "by": "css selector",
+              "selector": "input[id='userEmail']",
+              "value": "bob@example.com",
+              "value_from_env": null,
+              "description": "Enter email value"
+            },
+            {
+              "step_no": 3,
+              "action": "type",
+              "element": "password",
+              "by": "css selector",
+              "selector": "input[id='userPassword']",
+              "value": "Secret@123",
+              "value_from_env": null,
+              "description": "Enter password value"
+            },
+            {
+              "step_no": 4,
+              "action": "click",
+              "element": "login button",
+              "by": "css selector",
+              "selector": "button[type='submit']",
+              "value": null,
+              "value_from_env": null,
+              "description": "Click the login button"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "tag": "selenium_dynamic_login_email_password_localhost",
+      "patterns": [
+        "Open http://localhost:4200/. Type 'madhu.unni@gmail.com' into email field id='emailId' and type 'test123' into password field id='pwd'. Press login."
+      ],
+      "responses": [
+        {
+          "test_name": "Dynamic Multi Field Test",
+          "base_url": "http://localhost:4200/",
+          "steps": [
+            {
+              "step_no": 1,
+              "action": "navigate",
+              "element": null,
+              "by": null,
+              "selector": null,
+              "value": "http://localhost:4200/",
+              "value_from_env": null,
+              "description": "Navigate to the application URL"
+            },
+            {
+              "step_no": 2,
+              "action": "type",
+              "element": "email",
+              "by": "css selector",
+              "selector": "input[id='emailId']",
+              "value": "madhu.unni@gmail.com",
+              "value_from_env": null,
+              "description": "Enter email value"
+            },
+            {
+              "step_no": 3,
+              "action": "type",
+              "element": "password",
+              "by": "css selector",
+              "selector": "input[id='pwd']",
+              "value": "test123",
+              "value_from_env": null,
+              "description": "Enter password value"
+            },
+            {
+              "step_no": 4,
+              "action": "click",
+              "element": "login button",
+              "by": "css selector",
+              "selector": "button[type='submit']",
+              "value": null,
+              "value_from_env": null,
+              "description": "Click the login button"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "tag": "selenium_dynamic_login_username_password",
+      "patterns": [
+        "Go to https://qa.crm.test/signin. Fill username id='username' with 'qa_user' and password id='password' with 'qa-pass-9', then submit."
+      ],
+      "responses": [
+        {
+          "test_name": "Dynamic Multi Field Test",
+          "base_url": "https://qa.crm.test/signin",
+          "steps": [
+            {
+              "step_no": 1,
+              "action": "navigate",
+              "element": null,
+              "by": null,
+              "selector": null,
+              "value": "https://qa.crm.test/signin",
+              "value_from_env": null,
+              "description": "Navigate to the application URL"
+            },
+            {
+              "step_no": 2,
+              "action": "type",
+              "element": "username",
+              "by": "css selector",
+              "selector": "input[id='username']",
+              "value": "qa_user",
+              "value_from_env": null,
+              "description": "Enter username value"
+            },
+            {
+              "step_no": 3,
+              "action": "type",
+              "element": "password",
+              "by": "css selector",
+              "selector": "input[id='password']",
+              "value": "qa-pass-9",
+              "value_from_env": null,
+              "description": "Enter password value"
+            },
+            {
+              "step_no": 4,
+              "action": "click",
+              "element": "submit button",
+              "by": "css selector",
+              "selector": "button[type='submit']",
+              "value": null,
+              "value_from_env": null,
+              "description": "Click the submit button"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "tag": "selenium_dynamic_login_name_secret",
+      "patterns": [
+        "Launch https://accounts.test/auth. Enter 'agent007' in id='loginName'. Enter 'Bond#007' in id='loginSecret'. Click sign in."
+      ],
+      "responses": [
+        {
+          "test_name": "Dynamic Multi Field Test",
+          "base_url": "https://accounts.test/auth",
+          "steps": [
+            {
+              "step_no": 1,
+              "action": "navigate",
+              "element": null,
+              "by": null,
+              "selector": null,
+              "value": "https://accounts.test/auth",
+              "value_from_env": null,
+              "description": "Navigate to the application URL"
+            },
+            {
+              "step_no": 2,
+              "action": "type",
+              "element": "login name",
+              "by": "css selector",
+              "selector": "input[id='loginName']",
+              "value": "agent007",
+              "value_from_env": null,
+              "description": "Enter login name value"
+            },
+            {
+              "step_no": 3,
+              "action": "type",
+              "element": "login secret",
+              "by": "css selector",
+              "selector": "input[id='loginSecret']",
+              "value": "Bond#007",
+              "value_from_env": null,
+              "description": "Enter login secret value"
+            },
+            {
+              "step_no": 4,
+              "action": "click",
+              "element": "sign in button",
+              "by": "css selector",
+              "selector": "button[type='submit']",
+              "value": null,
+              "value_from_env": null,
+              "description": "Click the sign in button"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "tag": "selenium_dynamic_login_tenant_user_pin",
+      "patterns": [
+        "Visit https://portal.test/session. Set id='tenantId' to 'acme-prod', id='userId' to 'u-1001', and id='pin' to '2468'. Click continue."
+      ],
+      "responses": [
+        {
+          "test_name": "Dynamic Multi Field Test",
+          "base_url": "https://portal.test/session",
+          "steps": [
+            {
+              "step_no": 1,
+              "action": "navigate",
+              "element": null,
+              "by": null,
+              "selector": null,
+              "value": "https://portal.test/session",
+              "value_from_env": null,
+              "description": "Navigate to the application URL"
+            },
+            {
+              "step_no": 2,
+              "action": "type",
+              "element": "tenant id",
+              "by": "css selector",
+              "selector": "input[id='tenantId']",
+              "value": "acme-prod",
+              "value_from_env": null,
+              "description": "Enter tenant id value"
+            },
+            {
+              "step_no": 3,
+              "action": "type",
+              "element": "user id",
+              "by": "css selector",
+              "selector": "input[id='userId']",
+              "value": "u-1001",
+              "value_from_env": null,
+              "description": "Enter user id value"
+            },
+            {
+              "step_no": 4,
+              "action": "type",
+              "element": "pin",
+              "by": "css selector",
+              "selector": "input[id='pin']",
+              "value": "2468",
+              "value_from_env": null,
+              "description": "Enter pin value"
+            },
+            {
+              "step_no": 5,
+              "action": "click",
+              "element": "continue button",
+              "by": "css selector",
+              "selector": "button[type='submit']",
+              "value": null,
+              "value_from_env": null,
+              "description": "Click the continue button"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "tag": "selenium_dynamic_click_login_id",
+      "patterns": [
+        "Navigate to https://example.com/login. Click the button with id='loginBtn'."
+      ],
+      "responses": [
+        {
+          "test_name": "Dynamic Click Test",
+          "base_url": "https://example.com/login",
+          "steps": [
+            {
+              "step_no": 1,
+              "action": "navigate",
+              "element": null,
+              "by": null,
+              "selector": null,
+              "value": "https://example.com/login",
+              "value_from_env": null,
+              "description": "Navigate to the application URL"
+            },
+            {
+              "step_no": 2,
+              "action": "click",
+              "element": "login button",
+              "by": "css selector",
+              "selector": "button[id='loginBtn']",
+              "value": null,
+              "value_from_env": null,
+              "description": "Click the login button"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "tag": "selenium_dynamic_click_checkout_id",
+      "patterns": [
+        "Open https://app.test/cart. Click checkout button id='checkoutButton'."
+      ],
+      "responses": [
+        {
+          "test_name": "Dynamic Click Test",
+          "base_url": "https://app.test/cart",
+          "steps": [
+            {
+              "step_no": 1,
+              "action": "navigate",
+              "element": null,
+              "by": null,
+              "selector": null,
+              "value": "https://app.test/cart",
+              "value_from_env": null,
+              "description": "Navigate to the application URL"
+            },
+            {
+              "step_no": 2,
+              "action": "click",
+              "element": "checkout button",
+              "by": "css selector",
+              "selector": "button[id='checkoutButton']",
+              "value": null,
+              "value_from_env": null,
+              "description": "Click the checkout button"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "tag": "selenium_dynamic_click_search_id",
+      "patterns": [
+        "Go to http://localhost:8080/search. Press the Search button having id='searchNow'."
+      ],
+      "responses": [
+        {
+          "test_name": "Dynamic Click Test",
+          "base_url": "http://localhost:8080/search",
+          "steps": [
+            {
+              "step_no": 1,
+              "action": "navigate",
+              "element": null,
+              "by": null,
+              "selector": null,
+              "value": "http://localhost:8080/search",
+              "value_from_env": null,
+              "description": "Navigate to the application URL"
+            },
+            {
+              "step_no": 2,
+              "action": "click",
+              "element": "Search button",
+              "by": "css selector",
+              "selector": "button[id='searchNow']",
+              "value": null,
+              "value_from_env": null,
+              "description": "Click the Search button"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "tag": "selenium_dynamic_click_save_changes",
+      "patterns": [
+        "Launch https://demo.test/profile. Click Save Changes."
+      ],
+      "responses": [
+        {
+          "test_name": "Dynamic Click Test",
+          "base_url": "https://demo.test/profile",
+          "steps": [
+            {
+              "step_no": 1,
+              "action": "navigate",
+              "element": null,
+              "by": null,
+              "selector": null,
+              "value": "https://demo.test/profile",
+              "value_from_env": null,
+              "description": "Navigate to the application URL"
+            },
+            {
+              "step_no": 2,
+              "action": "click",
+              "element": "Save Changes button",
+              "by": "css selector",
+              "selector": "button[type='submit']",
+              "value": null,
+              "value_from_env": null,
+              "description": "Click the Save Changes button"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "tag": "selenium_dynamic_click_continue",
+      "patterns": [
+        "Visit https://portal.test/wizard. Click continue."
+      ],
+      "responses": [
+        {
+          "test_name": "Dynamic Click Test",
+          "base_url": "https://portal.test/wizard",
+          "steps": [
+            {
+              "step_no": 1,
+              "action": "navigate",
+              "element": null,
+              "by": null,
+              "selector": null,
+              "value": "https://portal.test/wizard",
+              "value_from_env": null,
+              "description": "Navigate to the application URL"
+            },
+            {
+              "step_no": 2,
+              "action": "click",
+              "element": "continue button",
+              "by": "css selector",
+              "selector": "button[type='submit']",
+              "value": null,
+              "value_from_env": null,
+              "description": "Click the continue button"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "tag": "selenium_dynamic_env_login_test",
+      "patterns": [
+        "Navigate to https://example.com/login. Enter email from environment variable TEST_EMAIL having id='email'. Enter password from environment variable TEST_PASSWORD having id='password'. Click login."
+      ],
+      "responses": [
+        {
+          "test_name": "Dynamic Environment Value Test",
+          "base_url": "https://example.com/login",
+          "steps": [
+            {
+              "step_no": 1,
+              "action": "navigate",
+              "element": null,
+              "by": null,
+              "selector": null,
+              "value": "https://example.com/login",
+              "value_from_env": null,
+              "description": "Navigate to the application URL"
+            },
+            {
+              "step_no": 2,
+              "action": "type",
+              "element": "email",
+              "by": "css selector",
+              "selector": "input[id='email']",
+              "value": null,
+              "value_from_env": "TEST_EMAIL",
+              "description": "Enter email from environment variable TEST_EMAIL"
+            },
+            {
+              "step_no": 3,
+              "action": "type",
+              "element": "password",
+              "by": "css selector",
+              "selector": "input[id='password']",
+              "value": null,
+              "value_from_env": "TEST_PASSWORD",
+              "description": "Enter password from environment variable TEST_PASSWORD"
+            },
+            {
+              "step_no": 4,
+              "action": "click",
+              "element": "login button",
+              "by": "css selector",
+              "selector": "button[type='submit']",
+              "value": null,
+              "value_from_env": null,
+              "description": "Click the login button"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "tag": "selenium_dynamic_env_login_app",
+      "patterns": [
+        "Open http://localhost:4200/. Fill id='emailId' from APP_EMAIL and id='pwd' from APP_PASSWORD, then press login."
+      ],
+      "responses": [
+        {
+          "test_name": "Dynamic Environment Value Test",
+          "base_url": "http://localhost:4200/",
+          "steps": [
+            {
+              "step_no": 1,
+              "action": "navigate",
+              "element": null,
+              "by": null,
+              "selector": null,
+              "value": "http://localhost:4200/",
+              "value_from_env": null,
+              "description": "Navigate to the application URL"
+            },
+            {
+              "step_no": 2,
+              "action": "type",
+              "element": "email",
+              "by": "css selector",
+              "selector": "input[id='emailId']",
+              "value": null,
+              "value_from_env": "APP_EMAIL",
+              "description": "Enter email from environment variable APP_EMAIL"
+            },
+            {
+              "step_no": 3,
+              "action": "type",
+              "element": "password",
+              "by": "css selector",
+              "selector": "input[id='pwd']",
+              "value": null,
+              "value_from_env": "APP_PASSWORD",
+              "description": "Enter password from environment variable APP_PASSWORD"
+            },
+            {
+              "step_no": 4,
+              "action": "click",
+              "element": "login button",
+              "by": "css selector",
+              "selector": "button[type='submit']",
+              "value": null,
+              "value_from_env": null,
+              "description": "Click the login button"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "tag": "selenium_dynamic_env_admin",
+      "patterns": [
+        "Go to https://admin.test. Type ADMIN_USER into id='adminUser' and ADMIN_PASS into id='adminPass'. Click sign in."
+      ],
+      "responses": [
+        {
+          "test_name": "Dynamic Environment Value Test",
+          "base_url": "https://admin.test",
+          "steps": [
+            {
+              "step_no": 1,
+              "action": "navigate",
+              "element": null,
+              "by": null,
+              "selector": null,
+              "value": "https://admin.test",
+              "value_from_env": null,
+              "description": "Navigate to the application URL"
+            },
+            {
+              "step_no": 2,
+              "action": "type",
+              "element": "admin user",
+              "by": "css selector",
+              "selector": "input[id='adminUser']",
+              "value": null,
+              "value_from_env": "ADMIN_USER",
+              "description": "Enter admin user from environment variable ADMIN_USER"
+            },
+            {
+              "step_no": 3,
+              "action": "type",
+              "element": "admin password",
+              "by": "css selector",
+              "selector": "input[id='adminPass']",
+              "value": null,
+              "value_from_env": "ADMIN_PASS",
+              "description": "Enter admin password from environment variable ADMIN_PASS"
+            },
+            {
+              "step_no": 4,
+              "action": "click",
+              "element": "sign in button",
+              "by": "css selector",
+              "selector": "button[type='submit']",
+              "value": null,
+              "value_from_env": null,
+              "description": "Click the sign in button"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "tag": "selenium_dynamic_env_token",
+      "patterns": [
+        "Launch https://qa.test/token. Enter API_TOKEN from environment variable API_TOKEN in id='token'. Click continue."
+      ],
+      "responses": [
+        {
+          "test_name": "Dynamic Environment Value Test",
+          "base_url": "https://qa.test/token",
+          "steps": [
+            {
+              "step_no": 1,
+              "action": "navigate",
+              "element": null,
+              "by": null,
+              "selector": null,
+              "value": "https://qa.test/token",
+              "value_from_env": null,
+              "description": "Navigate to the application URL"
+            },
+            {
+              "step_no": 2,
+              "action": "type",
+              "element": "token",
+              "by": "css selector",
+              "selector": "input[id='token']",
+              "value": null,
+              "value_from_env": "API_TOKEN",
+              "description": "Enter token from environment variable API_TOKEN"
+            },
+            {
+              "step_no": 3,
+              "action": "click",
+              "element": "continue button",
+              "by": "css selector",
+              "selector": "button[type='submit']",
+              "value": null,
+              "value_from_env": null,
+              "description": "Click the continue button"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "tag": "selenium_dynamic_env_tenant",
+      "patterns": [
+        "Visit https://portal.test/tenant. Fill id='tenant' from TENANT_NAME, id='username' from PORTAL_USER, and id='secret' from PORTAL_PASSWORD. Submit."
+      ],
+      "responses": [
+        {
+          "test_name": "Dynamic Environment Value Test",
+          "base_url": "https://portal.test/tenant",
+          "steps": [
+            {
+              "step_no": 1,
+              "action": "navigate",
+              "element": null,
+              "by": null,
+              "selector": null,
+              "value": "https://portal.test/tenant",
+              "value_from_env": null,
+              "description": "Navigate to the application URL"
+            },
+            {
+              "step_no": 2,
+              "action": "type",
+              "element": "tenant",
+              "by": "css selector",
+              "selector": "input[id='tenant']",
+              "value": null,
+              "value_from_env": "TENANT_NAME",
+              "description": "Enter tenant from environment variable TENANT_NAME"
+            },
+            {
+              "step_no": 3,
+              "action": "type",
+              "element": "username",
+              "by": "css selector",
+              "selector": "input[id='username']",
+              "value": null,
+              "value_from_env": "PORTAL_USER",
+              "description": "Enter username from environment variable PORTAL_USER"
+            },
+            {
+              "step_no": 4,
+              "action": "type",
+              "element": "secret",
+              "by": "css selector",
+              "selector": "input[id='secret']",
+              "value": null,
+              "value_from_env": "PORTAL_PASSWORD",
+              "description": "Enter secret from environment variable PORTAL_PASSWORD"
+            },
+            {
+              "step_no": 5,
+              "action": "click",
+              "element": "submit button",
+              "by": "css selector",
+              "selector": "button[type='submit']",
+              "value": null,
+              "value_from_env": null,
+              "description": "Click the submit button"
+            }
+          ]
+        }
+      ]
     }
   ]
 }
