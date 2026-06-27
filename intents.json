@@ -1,83 +1,232 @@
 {
   "intents": [
     {
-      "tag": "greeting",
+      "tag": "selenium_navigation_only",
       "patterns": [
-        "Hi",
-        "Hey",
-        "How are you",
-        "Is anyone there?",
-        "Hello",
-        "Good day"
+        "Navigate to http://localhost:4200/.",
+        "Open http://localhost:4200/.",
+        "Go to http://localhost:4200/.",
+        "Launch the application at http://localhost:4200/.",
+        "Visit http://localhost:4200/."
       ],
       "responses": [
-        "Hey :-)",
-        "Hello, thanks for visiting",
-        "Hi there, what can I do for you?",
-        "Hi there, how can I help?"
+        {
+          "test_name": "Login Test",
+          "base_url": "http://localhost:4200/",
+          "steps": [
+            {
+              "step_no": 1,
+              "action": "navigate",
+              "element": null,
+              "by": null,
+              "selector": null,
+              "value": "http://localhost:4200/",
+              "value_from_env": null,
+              "description": "Navigate to the application URL"
+            }
+          ]
+        }
       ]
     },
     {
-      "tag": "goodbye",
-      "patterns": ["Bye", "See you later", "Goodbye"],
+      "tag": "selenium_navigation_and_email_field",
+      "patterns": [
+        "Navigate to http://localhost:4200/. Enter email having the attribute id='emailId'.",
+        "Open http://localhost:4200/. Type email in the field with id='emailId'.",
+        "Go to http://localhost:4200/. Enter email into input id='emailId'.",
+        "Launch http://localhost:4200/ and fill email having id='emailId'.",
+        "Visit http://localhost:4200/. Enter email using id='emailId'."
+      ],
       "responses": [
-        "See you later, thanks for visiting",
-        "Have a nice day",
-        "Bye! Come back again soon."
+        {
+          "test_name": "Login Test",
+          "base_url": "http://localhost:4200/",
+          "steps": [
+            {
+              "step_no": 1,
+              "action": "navigate",
+              "element": null,
+              "by": null,
+              "selector": null,
+              "value": "http://localhost:4200/",
+              "value_from_env": null,
+              "description": "Navigate to the application URL"
+            },
+            {
+              "step_no": 2,
+              "action": "type",
+              "element": "email",
+              "by": "css selector",
+              "selector": "input[id='emailId']",
+              "value": null,
+              "value_from_env": null,
+              "description": "Enter email value"
+            }
+          ]
+        }
       ]
     },
     {
-      "tag": "thanks",
-      "patterns": ["Thanks", "Thank you", "That's helpful", "Thank's a lot!"],
-      "responses": ["Happy to help!", "Any time!", "My pleasure"]
-    },
-    {
-      "tag": "items",
+      "tag": "selenium_navigation_email_and_login_click",
       "patterns": [
-        "Which items do you have?",
-        "What kinds of items are there?",
-        "What do you sell?"
+        "Navigate to http://localhost:4200/. Enter email having the attribute id='emailId'. Click login.",
+        "Open http://localhost:4200/. Type email in the field with id='emailId'. Click login.",
+        "Go to http://localhost:4200/. Enter email into input id='emailId'. Press login.",
+        "Launch http://localhost:4200/, fill email having id='emailId', and click the login button.",
+        "Visit http://localhost:4200/. Enter email using id='emailId'. Submit the login form."
       ],
       "responses": [
-        "We sell coffee and tea",
-        "We have coffee and tea"
+        {
+          "test_name": "Login Test",
+          "base_url": "http://localhost:4200/",
+          "steps": [
+            {
+              "step_no": 1,
+              "action": "navigate",
+              "element": null,
+              "by": null,
+              "selector": null,
+              "value": "http://localhost:4200/",
+              "value_from_env": null,
+              "description": "Navigate to the application URL"
+            },
+            {
+              "step_no": 2,
+              "action": "type",
+              "element": "email",
+              "by": "css selector",
+              "selector": "input[id='emailId']",
+              "value": null,
+              "value_from_env": null,
+              "description": "Enter email value"
+            },
+            {
+              "step_no": 3,
+              "action": "click",
+              "element": "login button",
+              "by": "css selector",
+              "selector": "button[type='submit']",
+              "value": null,
+              "value_from_env": null,
+              "description": "Click the login button"
+            }
+          ]
+        }
       ]
     },
     {
-      "tag": "payments",
+      "tag": "selenium_complete_login_with_values",
       "patterns": [
-        "Do you take credit cards?",
-        "Do you accept Mastercard?",
-        "Can I pay with Paypal?",
-        "Are you cash only?"
+        "Navigate to http://localhost:4200/. Enter email having the attribute id='emailId' value 'madhu.unni@gmail.com' and password having the attribute id='pwd' value 'test123' . Click login.",
+        "Open http://localhost:4200/. Enter email id='emailId' value 'madhu.unni@gmail.com' and password id='pwd' value 'test123'. Click login.",
+        "Go to http://localhost:4200/. Type 'madhu.unni@gmail.com' into email field id='emailId' and type 'test123' into password field id='pwd'. Press login.",
+        "Launch http://localhost:4200/, fill email id='emailId' with 'madhu.unni@gmail.com', fill password id='pwd' with 'test123', then click login.",
+        "Visit http://localhost:4200/. Enter 'madhu.unni@gmail.com' in id='emailId'. Enter 'test123' in id='pwd'. Submit login."
       ],
       "responses": [
-        "We accept VISA, Mastercard and Paypal",
-        "We accept most major credit cards, and Paypal"
+        {
+          "test_name": "Login Test",
+          "base_url": "http://localhost:4200/",
+          "steps": [
+            {
+              "step_no": 1,
+              "action": "navigate",
+              "element": null,
+              "by": null,
+              "selector": null,
+              "value": "http://localhost:4200/",
+              "value_from_env": null,
+              "description": "Navigate to the application URL"
+            },
+            {
+              "step_no": 2,
+              "action": "type",
+              "element": "email",
+              "by": "css selector",
+              "selector": "input[id='emailId']",
+              "value": "madhu.unni@gmail.com",
+              "value_from_env": null,
+              "description": "Enter email value"
+            },
+            {
+              "step_no": 3,
+              "action": "type",
+              "element": "password",
+              "by": "css selector",
+              "selector": "input[id='pwd']",
+              "value": "test123",
+              "value_from_env": null,
+              "description": "Enter password value"
+            },
+            {
+              "step_no": 4,
+              "action": "click",
+              "element": "login button",
+              "by": "css selector",
+              "selector": "button[type='submit']",
+              "value": null,
+              "value_from_env": null,
+              "description": "Click the login button"
+            }
+          ]
+        }
       ]
     },
     {
-      "tag": "delivery",
+      "tag": "selenium_complete_login_with_environment_values",
       "patterns": [
-        "How long does delivery take?",
-        "How long does shipping take?",
-        "When do I get my delivery?"
+        "Navigate to http://localhost:4200/. Enter email from environment variable APP_EMAIL having the attribute id='emailId' and password from environment variable APP_PASSWORD having the attribute id='pwd'. Click login.",
+        "Open http://localhost:4200/. Type APP_EMAIL into id='emailId' and APP_PASSWORD into id='pwd'. Click login.",
+        "Go to http://localhost:4200/. Fill email id='emailId' from APP_EMAIL and password id='pwd' from APP_PASSWORD, then press login.",
+        "Launch http://localhost:4200/, enter email from APP_EMAIL using id='emailId', enter password from APP_PASSWORD using id='pwd', and submit login."
       ],
       "responses": [
-        "Delivery takes 2-4 days",
-        "Shipping takes 2-4 days"
-      ]
-    },
-    {
-      "tag": "funny",
-      "patterns": [
-        "Tell me a joke!",
-        "Tell me something funny!",
-        "Do you know a joke?"
-      ],
-      "responses": [
-        "Why did the hipster burn his mouth? He drank the coffee before it was cool.",
-        "What did the buffalo say when his son left for college? Bison."
+        {
+          "test_name": "Login Test",
+          "base_url": "http://localhost:4200/",
+          "steps": [
+            {
+              "step_no": 1,
+              "action": "navigate",
+              "element": null,
+              "by": null,
+              "selector": null,
+              "value": "http://localhost:4200/",
+              "value_from_env": null,
+              "description": "Navigate to the application URL"
+            },
+            {
+              "step_no": 2,
+              "action": "type",
+              "element": "email",
+              "by": "css selector",
+              "selector": "input[id='emailId']",
+              "value": null,
+              "value_from_env": "APP_EMAIL",
+              "description": "Enter email from environment variable APP_EMAIL"
+            },
+            {
+              "step_no": 3,
+              "action": "type",
+              "element": "password",
+              "by": "css selector",
+              "selector": "input[id='pwd']",
+              "value": null,
+              "value_from_env": "APP_PASSWORD",
+              "description": "Enter password from environment variable APP_PASSWORD"
+            },
+            {
+              "step_no": 4,
+              "action": "click",
+              "element": "login button",
+              "by": "css selector",
+              "selector": "button[type='submit']",
+              "value": null,
+              "value_from_env": null,
+              "description": "Click the login button"
+            }
+          ]
+        }
       ]
     }
   ]
